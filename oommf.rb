@@ -11,7 +11,8 @@ class Oommf < Formula
       system "./oommf.tcl", "pimake", "upgrade"
       system "./oommf.tcl", "pimake"
     end
-    bin.install "oommf/oommf.tcl" => "oommf"
+    inreplace "xspin525.tcl", "CELLAR", prefix
+    bin.install_symlink "oommf/oommf.tcl" => "oommf"
   end
 
 end
