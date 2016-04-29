@@ -1,4 +1,4 @@
-class Oommf < Formula
+cd class Oommf < Formula
   desc "Object Oriented MicroMagnetic Framework - OOMMF"
   homepage "http://math.nist.gov/oommf/"
   url "https://github.com/fangohr/oommf/archive/oommf-12.6-modified.tar.gz"
@@ -11,8 +11,7 @@ class Oommf < Formula
       system "./oommf.tcl", "pimake", "upgrade"
       system "./oommf.tcl", "pimake"
     end
-    inreplace "xspin525.tcl", "CELLAR", prefix
-    bin.install_symlink "oommf/oommf.tcl" => "oommf"
+    prefix.install Dir["oommf"]
   end
 
 end
