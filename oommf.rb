@@ -11,7 +11,8 @@ cd class Oommf < Formula
       system "./oommf.tcl", "pimake", "upgrade"
       system "./oommf.tcl", "pimake"
     end
-    prefix.install Dir["oommf"]
+    bin.install Dir["oommf/*"]
+    
   end
 
 end
